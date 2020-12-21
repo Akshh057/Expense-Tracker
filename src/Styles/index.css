@@ -1,0 +1,13 @@
+#root,body,html{
+    height: 100%;
+    margin: 0;
+    /* font-family: 'Yanone Kaffeesatz', sans-serif; */
+    font-family: 'Merriweather Sans', sans-serif;
+}
+body{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../assests/money.png);
+    background-size: cover; 
+}
+h2{
+    font-weight: 100;
+}
