@@ -1,5 +1,5 @@
 .main__con{
-    height: 35vh;
+    height: auto;
     width:25vw;
     /* border-bottom: 10px solid rgba(0,255,0,0.5); */
     background-color: white;
@@ -8,13 +8,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 .main__heading{
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    height: 30vh;
+    height: auto;
     width: 100%;
 
+}
+.main__tip{
+    margin-top: 5%;
+    color: darkslategray;
+    font-size:12px;
 }
