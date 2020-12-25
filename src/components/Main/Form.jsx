@@ -6,7 +6,7 @@ import  { incomeCategories, expenseCategories} from '../../constants/categories'
 import formatDate from '../../utils/formatDate'
 const initialState ={
     type:"Income",
-    category:"Business",
+    category:"",
     amount:"",
     date: formatDate(new Date()),
 }
@@ -33,11 +33,12 @@ const Form = () => {
                 <div className="form__main2">
                         {/* <input type="text"/> */}
                     <select  className="type__cat" value={formData.type} onChange={(e)=> setFormData({...formData,type:e.target.value})}>
-                            <option selected="selected" disabled="disabled">Choose Type</option> 
+                    <option selected="selected" disabled="disabled" value="Choose Type">Choose type</option> 
                             <option value="Income">Income</option>
                             <option value="Expense">Expense</option>
                         </select>
                         <select className="type__cat" value={formData.category} onChange={(e)=> setFormData({...formData,category:e.target.value})}>
+                        <option selected="selected" disabled="disabled">Choose Cat</option> 
                         {selectedCategories.map((c)=>
                                 <option key={c.type} value={c.type}>
                                     {c.type}
@@ -56,7 +57,7 @@ const Form = () => {
 
                     />
                 </div> 
-                <button className="form__btn" type="submit" onClick={createTransaction}>
+                <button className="form__btn"  onClick={createTransaction}>
                             CREATE            
                 </button>
                 {/* </form> */}

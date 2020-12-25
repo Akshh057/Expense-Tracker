@@ -1,19 +1,19 @@
 import React from 'react'
 import {Doughnut} from 'react-chartjs-2';
 import './details.css';
+import useTransactions from '../../useTransactions';
 const Details = ({title}) => {
+    const {total,chartData} = useTransactions(title);
     return (
-        // <Card className={classses.income}>
-        //     <CardHeader title="Income"/>
-        //     <CardContent>
-        //         <Typography variant="h5">$50</Typography>
-        //     </CardContent>
-        // </Card>
         <div className={ `${title=== "Income" ? "income":"expense"}` }>
            <h2>{title}</h2>
            <div >
-                $50
+                ${total}
            </div>
+          <div style={{height:"auto", border:"1px solid red"}}>
+                {chartData.lables} 
+          </div>
+           <Doughnut data={chartData}/> 
         </div>
     )
 }
